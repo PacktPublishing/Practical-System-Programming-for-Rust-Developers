@@ -4,7 +4,7 @@ use std::fmt;
 use std::iter::Peekable;
 use std::str::Chars;
 
-// Priary external libraries
+// Primary external libraries
 
 // Utility external libraries
 
