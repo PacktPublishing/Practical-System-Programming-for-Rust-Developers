@@ -1,6 +1,5 @@
 /// This program reads tokens returned by Tokenizer and converts them into AST.
 // Standard lib
-use std::error;
 use std::fmt;
 
 // Internal modules
@@ -172,16 +171,16 @@ impl fmt::Display for ParseError {
     }
 }
 
-impl error::Error for ParseError {
+/*impl error::Error for ParseError {
     fn description(&self) -> &str {
         match &self {
             self::ParseError::UnableToParse(e) => &e,
             self::ParseError::InvalidOperator(e) => &e,
         }
     }
-}
+}*/
 
-// Handle error thrown from Tokenizer
+// Handle error thrown from AST module
 
 impl std::convert::From<std::boxed::Box<dyn std::error::Error>> for ParseError {
     fn from(_evalerr: std::boxed::Box<dyn std::error::Error>) -> Self {
