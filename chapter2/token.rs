@@ -1,3 +1,7 @@
+/// This contains enum for list of Tokens, and handles Operator precedence rules.
+
+// List of valid tokens that can be constructed from arithmetic expression by Tokenizer
+
 #[derive(Debug, PartialEq, Clone)]
 pub enum Token {
     Add,
@@ -11,6 +15,8 @@ pub enum Token {
     EOF,
 }
 
+// Order of operators as per operator precedence rules (low to high)
+
 #[derive(Debug, PartialEq, PartialOrd)]
 /// Defines all the OperPrec levels, from lowest to highest.
 pub enum OperPrec {
@@ -20,6 +26,8 @@ pub enum OperPrec {
     Power,
     Negative,
 }
+
+// This contains methods to retrieve operator precedence for a given arithmetic operator
 
 impl Token {
     pub fn get_oper_prec(&self) -> OperPrec {
