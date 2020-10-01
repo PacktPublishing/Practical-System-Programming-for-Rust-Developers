@@ -1,0 +1,6 @@
+Cargo.lock
+Cargo.toml
+a.txt
+b.txt
+src
+target
