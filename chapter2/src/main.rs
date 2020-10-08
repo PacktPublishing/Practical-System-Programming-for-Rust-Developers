@@ -1,28 +1,24 @@
 /// This is the main command-line application for arithmetic expression evaluator
-
 // Standard library
-use std::f64;
 use std::io;
 
 // code for arithmetic expression evaluation is in parsemath module
 mod parsemath;
-use parsemath::parser::ParseError;
-
+use parsemath::ast;
+use parsemath::parser::{ParseError, Parser};
 
 // Function to invoke Parser and evaluate expression
 fn evaluate(expr: String) -> Result<f64, ParseError> {
-    let len = expr.len();
-    let mut expr = expr;
-    expr.truncate(len - 1); // remove newline character
-    let mut math_parser = parsemath::parser::Parser::new(&expr)?;
+    let expr = expr.split_whitespace().collect::<String>(); // remove whitespace chars
+    let mut math_parser = Parser::new(&expr)?;
     let ast = math_parser.parse()?;
     println!("The generated AST is {:?}", ast);
 
-    Ok(parsemath::ast::eval(ast)?)
+    Ok(ast::eval(ast)?)
 }
 
 // Main function reads aritnmetic expression from command-line and displays result and error.
-// It calls the evaluate function to perform compuation.
+// It calls the evaluate function to perform computation.
 
 fn main() {
     println!("Hello! Welcome to Arithmetic expression evaluator.");
