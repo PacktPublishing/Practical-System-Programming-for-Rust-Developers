@@ -27,14 +27,12 @@ pub enum TagType {
 
 //this checks if a symbol string is contained within another string
 pub fn check_symbol_string(input: &str, symbol: &str) -> bool {
-    let symbols = input.chars();
-    symbols.as_str().contains(symbol)
+    input.contains(symbol)
 }
 
 // This checks for matching symbol strings in a given input
 pub fn check_matching_pair(input: &str, symbol1: &str, symbol2: &str) -> bool {
-    let input_iter = input.chars();
-    input_iter.as_str().contains(symbol1) && input_iter.as_str().contains(symbol2)
+    input.contains(symbol1) && input.contains(symbol2)
 }
 
 // this returns index of given char symbol, if symbol is present.
@@ -105,7 +103,7 @@ pub fn generate_html_template_var(
     context: HashMap<String, String>,
 ) -> String {
     let mut html = String::new();
-
+    println!("expression data is:{:?}", content);
     if let Some(h) = content.head {
         html.push_str(&h);
     }
