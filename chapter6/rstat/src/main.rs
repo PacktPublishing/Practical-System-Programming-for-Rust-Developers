@@ -2,10 +2,8 @@ use std::path::PathBuf;
 use structopt::StructOpt;
 mod srcstats;
 use srcstats::get_summary_src_stats;
-
 mod errors;
 use errors::StatsError;
-
 #[derive(Debug, StructOpt)]
 #[structopt(
     name = "rstat",
@@ -17,7 +15,6 @@ struct Opt {
     #[structopt(name = "mode", short)]
     mode: String,
 }
-
 fn main() -> Result<(), StatsError> {
     let opt = Opt::from_args();
     let mode = &opt.mode[..];

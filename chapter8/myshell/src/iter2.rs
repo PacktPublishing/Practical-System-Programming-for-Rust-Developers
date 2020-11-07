@@ -4,7 +4,7 @@ use std::process::Command;
 
 fn main() {
     loop {
-        print!("$");
+        print!("$ ");
         stdout().flush().unwrap();
         let mut user_input = String::new();
         stdin()

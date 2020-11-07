@@ -5,7 +5,7 @@ use std::process::Command;
 fn main() {
     println!("Hello! Welcome to Myshell");
     loop {
-        print!("$");
+        print!("$ ");
         stdout().flush().unwrap();
         let mut user_input = String::new();
         stdin()
@@ -37,8 +37,7 @@ fn main() {
             };
             match child {
                 Ok(mut child) => {
-                    if child.wait().unwrap().success() {
-                    } else {
+                    if !child.wait().unwrap().success() {
                         println!("\n{}", "Child process failed")
                     }
                 }
