@@ -43,10 +43,9 @@ fn main() {
                 }
                 Err(e) => match e.kind() {
                     ErrorKind::InvalidInput => eprintln!(
-                        "{}",
                         "Sorry, show command only supports following options: files , process "
                     ),
-                    _ => eprintln!("{}", "Please enter a valid command"),
+                    _ => eprintln!("Please enter a valid command"),
                 },
             }
         }

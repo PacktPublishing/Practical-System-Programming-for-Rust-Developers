@@ -12,7 +12,6 @@ fn main() {
             .expect("Unable to read user input");
         let command_to_execute = user_input.trim();
         let command_args: Vec<&str> = command_to_execute.split_whitespace().collect();
-
         let mut child = Command::new(command_args[0])
             .args(&command_args[1..])
             .spawn()
