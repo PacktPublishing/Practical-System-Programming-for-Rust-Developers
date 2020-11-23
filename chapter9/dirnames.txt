@@ -1,6 +1,1 @@
-/Users/<username>/rust/project1
-/Users/<username>/rust/project2
-/Users/<username>/rust/project3
-/Users/<username>/rust/project4
-/Users/<username>/rust/project5
-
+/tmp/
