@@ -38,9 +38,7 @@ impl FromStr for SizeOption {
             "small" => Ok(SizeOption::Small),
             "medium" => Ok(SizeOption::Medium),
             "large" => Ok(SizeOption::Large),
-            _ => Err(ImagixError::UserInputError(
-                "Invalid input for size".to_string(),
-            )),
+            _ => Ok(SizeOption::Small),
             //default
         }
     }
@@ -104,7 +102,6 @@ fn resize_image(size: u32, src_folder: &mut PathBuf) -> Result<(), ImagixError> 
         .unwrap()
         .to_str()
         .ok_or(std::io::ErrorKind::InvalidInput)
-        //       .map(|f| format!("{}-{:?}.png", f, size));
         .map(|f| format!("{}.png", f));
 
     // Construct path to destination folder i.e. create /tmp under source folder if not exists
@@ -135,9 +132,10 @@ fn resize_image(size: u32, src_folder: &mut PathBuf) -> Result<(), ImagixError> 
     Ok(())
 }
 
+// The program supports only files of type jpg/JPG and png/PNG.
 pub fn get_image_files(src_folder: PathBuf) -> Result<Vec<PathBuf>, ImagixError> {
     let entries = fs::read_dir(src_folder)
-        .map_err(|e| ImagixError::UserInputError("Invalid source folder".to_string()))?
+        .map_err(|_e| ImagixError::UserInputError("Invalid source folder".to_string()))?
         .map(|res| res.map(|e| e.path()))
         .collect::<Result<Vec<_>, io::Error>>()?
         .into_iter()
@@ -159,7 +157,7 @@ mod tests {
         let mut path = PathBuf::from("/tmp/images/image1.jpg");
         let destination_path = PathBuf::from("/tmp/images/tmp/image1.png");
         match process_resize_request(SizeOption::Small, Mode::Single, &mut path) {
-            Ok(dest) => assert_eq!(true, destination_path.exists()),
+            Ok(_) => println!("Successful resize of single image"),
             Err(e) => println!("Error in single image: {:?}", e),
         }
         assert_eq!(true, destination_path.exists());

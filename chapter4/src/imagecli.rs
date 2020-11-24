@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 mod imagix;
 use ::imagix::error::ImagixError;
 use ::imagix::resize::{process_resize_request, Mode, SizeOption};
@@ -35,10 +36,9 @@ fn main() {
         Commandline::Resize {
             size,
             mode,
-            srcfolder,
+            mut srcfolder,
         } => {
-            let mut src_folder = srcfolder;
-            match process_resize_request(size, mode, &mut src_folder) {
+            match process_resize_request(size, mode, &mut srcfolder) {
                 Ok(_) => println!("Image(s) resized successfully"),
                 Err(e) => match e {
                     ImagixError::FileIOError(e) => println!("{}", e),

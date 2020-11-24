@@ -11,19 +11,19 @@ pub enum ImagixError {
 }
 
 impl From<io::Error> for ImagixError {
-    fn from(error: io::Error) -> Self {
+    fn from(_error: io::Error) -> Self {
         ImagixError::FileIOError("Error in File I/O".to_string())
     }
 }
 
 impl From<error::ImageError> for ImagixError {
-    fn from(error: error::ImageError) -> Self {
+    fn from(_error: error::ImageError) -> Self {
         ImagixError::ImageResizingError("Error in image processing".to_string())
     }
 }
 
 impl From<io::ErrorKind> for ImagixError {
-    fn from(error: io::ErrorKind) -> Self {
+    fn from(_error: io::ErrorKind) -> Self {
         ImagixError::UserInputError("Error in user input".to_string())
     }
 }
