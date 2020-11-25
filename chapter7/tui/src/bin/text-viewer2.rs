@@ -170,6 +170,10 @@ struct Coordinates {
 fn main() {
     //Get arguments from command line
     let args: Vec<String> = args().collect();
+    if args.len() < 2 {
+        println!("Please provide file name as argument");
+        std::process::exit(0);
+    }
     //Check if file exists. If not, print error message and exit process
     if !std::path::Path::new(&args[1]).exists() {
         println!("File does not exist");
@@ -182,7 +186,7 @@ fn main() {
     println!("{}", termion::cursor::Goto(1, 1));
     // Initialize editor
     let mut editor = TextViewer::init(&args[1]);
-    editor.show_document();
     editor.set_pos(1, 1);
+    editor.show_document();
     editor.run();
 }
