@@ -1,1 +1,0 @@
-{"rustc":12217307662193597186,"features":"[]","target":8566956652886722598,"profile":14996655781355331481,"path":7054289101709424826,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/tcpudp-31984598ff5e0e2f/dep-bin-udp_client-31984598ff5e0e2f"}}],"rustflags":["-C","prefer-dynamic","-C","rpath"],"metadata":13779719443416291531}
