@@ -1,0 +1,1 @@
+{"rustc":12217307662193597186,"features":"[]","target":5468234331131689689,"profile":14996655781355331481,"path":14924045246866494915,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/tcpudp-173ca5eaf41887a2/dep-bin-tcp_server-173ca5eaf41887a2"}}],"rustflags":["-C","prefer-dynamic","-C","rpath"],"metadata":13779719443416291531}

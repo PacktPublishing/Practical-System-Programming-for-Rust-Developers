@@ -9,7 +9,7 @@ fn main() {
     let args: Vec<_> = env::args().collect();
     if args.len() < 3 {
         eprintln!("Please provide proxy-from and proxy-to addresses");
-        exit(0);
+        exit(2);
     }
     let proxy_server = &args[1];
     let origin_server = &args[2];
@@ -22,13 +22,13 @@ fn main() {
         let port = proxy_listener.local_addr().unwrap().port();
         if let Err(_err) = TcpStream::connect(origin_server) {
             println!("Please re-start the origin server");
-            exit(0);
+            exit(1);
         }
 
         println!("Running on Addr:{}, Port:{}\n", addr, port);
     } else {
         eprintln!("Unable to bind to specified proxy port");
-        exit(0);
+        exit(1);
     }
 
     let mut thread_handles = Vec::new();

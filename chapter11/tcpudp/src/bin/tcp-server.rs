@@ -8,7 +8,7 @@ fn main() {
         println!("Connection established");
         let mut buffer = [0; 100];
         stream.read(&mut buffer).unwrap();
-        println!("Received from client {}", String::from_utf8_lossy(&buffer));
+        println!("Received from client: {}", String::from_utf8_lossy(&buffer));
         stream.write(&mut buffer).unwrap();
     }
 }
