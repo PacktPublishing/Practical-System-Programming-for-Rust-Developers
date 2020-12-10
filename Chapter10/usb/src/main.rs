@@ -1,7 +1,6 @@
 use libusb::{Context, Device, DeviceHandle};
 use std::fs::File;
 use std::io::Write;
-use std::result::Result;
 use std::time::Duration;
 
 use std::fmt;
