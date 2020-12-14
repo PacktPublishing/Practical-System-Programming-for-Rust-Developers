@@ -1,0 +1,1 @@
+{"rustc":12217307662193597186,"features":"[]","target":4144718664990317059,"profile":14891217944882224483,"path":1971126846978498487,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/tcpproxy-07fe34c963205a5d/dep-bin-origin-07fe34c963205a5d"}}],"rustflags":["-C","prefer-dynamic","-C","rpath"],"metadata":13779719443416291531}
