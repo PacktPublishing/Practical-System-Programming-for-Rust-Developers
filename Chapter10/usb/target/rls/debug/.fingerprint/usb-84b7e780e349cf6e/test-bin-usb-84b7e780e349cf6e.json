@@ -1,1 +1,0 @@
-{"rustc":12217307662193597186,"features":"[]","target":11717903641847309453,"profile":1647870076477133176,"path":1036222786711178230,"deps":[[7538322115749554321,"libusb",false,18203167453604526164]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/usb-84b7e780e349cf6e/dep-test-bin-usb-84b7e780e349cf6e"}}],"rustflags":[],"metadata":13779719443416291531}
