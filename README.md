@@ -7,6 +7,9 @@ This is the code repository for [Practical System Programming for Rust Developer
 **Build fast and secure software for Linux/Unix systems with the help of practical examples**
 
 ## What is this book about?
+This Rust book is designed to guide you through systems programming with Rust using practical examples and projects. You’ll explore various Rust features, along with useful techniques, which will help you to develop system tools, utilities, and more.
+
+
 This book covers the following exciting features:
 Gain a solid understanding of how system resources are managed
 Use Rust confidently to control and operate a Linux or Unix system
