@@ -7,8 +7,6 @@ This is the code repository for [Practical System Programming for Rust Developer
 **Build fast and secure software for Linux/Unix systems with the help of practical examples**
 
 ## What is this book about?
-0
-
 This book covers the following exciting features:
 Gain a solid understanding of how system resources are managed
 Use Rust confidently to control and operate a Linux or Unix system
@@ -49,8 +47,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 * Rust Programming Cookbook [[Packt]](https://www.packtpub.com/product/rust-programming-cookbook/9781789530667?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/1789530660)
 
 ## Get to Know the Author
-**Prabhu Eshwarla**
-Prabhu Eshwarla has been shipping high-quality, business-critical software to large enterprises and running IT operations for over 25 years. He is also a passionate teacher of complex technologies.
+**Prabhu Eshwarla** has been shipping high-quality, business-critical software to large enterprises and running IT operations for over 25 years. He is also a passionate teacher of complex technologies.
 Prabhu has worked with Hewlett Packard and has deep experience in software engineering, engineering management, and IT operations.
 Prabhu is passionate about Rust and blockchain and specializes in distributed systems. He considers coding to be a creative craft, and an excellent tool to create new digital worlds (and experiences) sustained through rigorous software engineering.
 
