@@ -1,8 +1,8 @@
 # Hands-On-System-Programming-with-Rust
 
-<a href="https://www.packtpub.com/in/programming/practical-system-programming-for-rust-developers?utm_source=github&utm_medium=repository&utm_campaign=9781786461629"><img src="" alt="Useful Links" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/in/programming/practical-system-programming-for-rust-developers?utm_source=github&utm_medium=repository&utm_campaign=9781786461629"><img src="https://static.packt-cdn.com/products/9781800560963/cover/smaller" alt="Practical System Programming for Rust Developers" height="256px" align="right"></a>
 
-This is the code repository for [Useful Links](https://www.packtpub.com/in/programming/practical-system-programming-for-rust-developers?utm_source=github&utm_medium=repository&utm_campaign=9781786461629), published by Packt.
+This is the code repository for [Practical System Programming for Rust Developers](https://www.packtpub.com/in/programming/practical-system-programming-for-rust-developers?utm_source=github&utm_medium=repository&utm_campaign=9781786461629), published by Packt.
 
 **Build fast and secure software for Linux/Unix systems with the help of practical examples**
 
